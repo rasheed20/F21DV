@@ -1,0 +1,17 @@
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<htmL>
+<meta charset="utf-8">
+
+<body>
+<h1 id="version" ></h1>
+
+<script src='https://d3js.org/d3.v7.min.js'></script>
+<script>
+var element = document.getElementById("version");
+
+element.innerHTML ="D3 version: " + d3.version
+console.log('d3.version:', d3.version);
+</script>
+</body>
+</html>

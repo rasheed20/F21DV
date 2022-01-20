@@ -1,0 +1,27 @@
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<htmL>
+<meta charset="utf-8">
+
+<body>
+<h1 id="version" ></h1>
+<p>First paragraph</p> 
+<p>Second paragraph</p> 
+<h4 class="test"> Test header</h4>
+<h4 class="test2"> Test header2</h4>
+
+
+<script src='https://d3js.org/d3.v7.min.js'></script>
+<script>
+var element = document.getElementById("version");
+
+element.innerHTML ="D3 version: " + d3.version 
+
+d3.select("p").style("color", "blue");
+var testheader = d3.selectAll(".test");
+testheader.style("color", "red");
+testheader.style("font-family", "Arial");
+
+</script>
+</body>
+</html>
