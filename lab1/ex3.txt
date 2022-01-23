@@ -1,0 +1,33 @@
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<htmL>
+<meta charset="utf-8">
+
+<body>
+<h1 id="version" ></h1>
+
+
+
+<script src='https://d3js.org/d3.v7.min.js'></script>
+<script>
+var element = document.getElementById("version");
+
+element.innerHTML ="D3 version: " + d3.version 
+
+for (let i = 1; i <= 10; i++) {
+
+    let newdiv = d3.select("body").append('div'); 
+    newdiv.text(i); 
+    
+    if(i<=5){
+        newdiv.style('color','red');
+    }else{
+        newdiv.style('color','green');
+    }
+    
+}
+
+</script>
+</body>
+</html>
+
