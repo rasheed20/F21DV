@@ -1,0 +1,27 @@
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+     
+<div></div> <div></div> <div></div> <div></div> 
+ 
+<script> 
+let num = [10, 50, 100, 200]; 
+ 
+let paragraph = d3.select("body") .selectAll("div") .data(num) 
+                .text(function (d, i) { 
+                    return 'cont:' + d; 
+                }) 
+                .style("color", function(d, i) { 
+                    if ( d < 100 && d>=50) { 
+                        return "red"; 
+                    } else { 
+                        return "yellow"; 
+                    } 
+                    return 'blue'; 
+                }); 
+    </script>
+  </body>
+</html>

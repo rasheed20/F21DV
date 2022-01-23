@@ -1,0 +1,23 @@
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <body>
+    <div></div> <div></div> <div></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      let otherdata = [ { name: "test", val: 1, color: "red" },
+                        { name: "other", val: 2, color: "blue" },
+                        { name: "b", val: 3, color: "green" } ];
+      var paragraph = d3 .select("body").selectAll("div") .data(otherdata)
+        .text(function (d, i) {
+          console.log("d.name: " + d.name);
+          console.log("d.val:  " + d.val);
+          console.log("d.val:  " + d.val);
+          console.log("i: " + i);
+          console.log("this: " + this);
+          return "cont:" + d.name + " " + d.color; 
+        });
+    </script>
+  </body>
+</html>

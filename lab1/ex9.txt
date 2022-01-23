@@ -1,0 +1,35 @@
+Exercise 9: For the example above, to count how many of the names include ‘Mr.’ and ‘Mrs’ (or other).  Also print out other details using other column header information, such as, 
+how many passengers are ‘male’ and how many ‘female’. 
+
+
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <body>
+      <!--<p></p>-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script> 
+        let titaniccsv = 'https://raw.githubusercontent.com/dsindy/kaggle-titanic/master/data/test.csv'; 
+        let maleCount =0, femaleCount =0;
+        let mrCount=0, mrsCount=0,otherCount =0;
+    
+        d3.csv(titaniccsv, function(data) { 
+            console.log( data.Name ); 
+           if(data.Name.includes("Mr")){ mrCount +=1; }
+           else if(data.Name.includes("Mrs")){ mrsCount +=1;  }
+           else{ otherCount +=1; }
+           
+           if(data.Sex.includes("male")){ maleCount +=1; }
+           else{ femaleCount +=1; }
+        }); 
+
+        d3.select("body").append("p").text("mrCount:"+mrCount);
+        d3.select("body").append("p").text("mrsCount:"+mrsCount);
+        d3.select("body").append("p").text("otherCount:"+otherCount);
+        
+        d3.select("body").append("p").text("maleCount:"+mrCount);
+        d3.select("body").append("p").text("femaleCount:"+femaleCount);
+    </script>
+  </body>
+</html>

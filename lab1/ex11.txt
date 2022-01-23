@@ -1,0 +1,20 @@
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <body>
+      <p></p> <p></p> <p></p> <p></p>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script> 
+        var svg = d3.select("body").append("svg").attr("width",  400).attr("height", 400)
+        .style("border", '3px solid green'); 
+     
+        //Create line element inside SVG 
+        svg.append("line").attr("x1", 100).attr("y1", 100).attr("x2", 100).attr("y2", 300).attr("stroke","blue")
+        svg.append("line").attr("x1", 100).attr("y1", 300).attr("x2", 300).attr("y2", 300).attr("stroke","green")
+        svg.append("line").attr("x1", 300).attr("y1", 300).attr("x2", 300).attr("y2", 100).attr("stroke","red") 
+        svg.append("line").attr("x1", 300).attr("y1", 100).attr("x2", 100).attr("y2", 100).attr("stroke","black") 
+
+    </script>
+  </body>
+</html>

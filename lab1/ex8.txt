@@ -1,0 +1,26 @@
+Exercise 8: Modify the above code, use the following data:  
+var myData = [‘a’, 4, 1, ‘b’, 6, 2, 8, 9, ‘z’ ]; 
+Instead of a paragraph ‘p’ use a ‘span’.  If the data element is a ‘character’ display it as ‘blue’, if it’s a number ‘display 
+it as green’ (note you’ll need to ‘chain’ a ‘.style’ method after you’ve appended the new elements). 
+
+
+<!-- source is https://bl.ocks.org/mbostock/4060366 -->
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script> 
+    var myData = ['a', 4, 1, 'b', 6, 2, 8, 9, 'z' ];
+    var p = d3.select("body").selectAll("p").data(myData).enter().append('p') 
+                .text(function (d, i) {return d;})
+                .style("color",function (d,i){
+                    if(typeof d == 'number'){
+                        return 'green';
+                    }else{
+                        return 'blue';
+                    }
+                }); 
+    </script>
+  </body>
+</html>
